@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17493f">
+  <meta name="description" content="双河镇数字导览，了解双河镇概况、特色点位与高山蔬菜产业。">
+  <meta property="og:title" content="蔬香小镇·康养双河">
+  <meta property="og:description" content="海拔1330米的清凉世界，武隆北部的边贸之乡、康养之乡、蔬菜之乡。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>蔬香小镇·康养双河</title>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <strong>蔬香小镇·康养双河</strong>
+          <small>双河镇数字导览</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#overview">镇情概览</a>
+        <a href="#spots">特色点位</a>
+        <a href="#industry">高山蔬菜</a>
+        <a href="#villages">村社概览</a>
+      </nav>
+      <button class="share-btn" type="button" id="shareBtn">分享</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag">重庆市武隆区双河镇</p>
+        <h1>蔬香小镇·康养双河</h1>
+        <p class="hero-subtitle">海拔1330米的清凉世界，武隆北部的边贸之乡、康养之乡、蔬菜之乡。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#spots">查看特色点位</a>
+          <a class="btn btn-secondary" href="#overview">了解双河</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container stats-grid" id="stats"></div>
+    </section>
+
+    <section class="section overview-section" id="overview">
+      <div class="container section-head">
+        <div>
+          <p class="section-kicker">镇情概览</p>
+          <h2>一眼读懂双河</h2>
+        </div>
+      </div>
+      <div class="container overview-grid">
+        <div class="overview-copy card">
+          <p id="townIntro"></p>
+          <p id="townEconomy"></p>
+          <p id="townAchievements"></p>
+        </div>
+        <div class="identity-panel card">
+          <button type="button" class="identity-item" data-theme="0">
+            <span class="identity-index">01</span>
+            <span>
+              <b>边贸之乡</b>
+              <small>区位优势与特色农业</small>
+            </span>
+            <img class="identity-thumb" src="assets/photo-01.webp" alt="双河高山蔬菜基地" loading="lazy">
+          </button>
+          <button type="button" class="identity-item" data-theme="1">
+            <span class="identity-index">02</span>
+            <span>
+              <b>康养之乡</b>
+              <small>山地风光与乡村休闲</small>
+            </span>
+            <img class="identity-thumb" src="assets/photo-04.webp" alt="双河山地田园风光" loading="lazy">
+          </button>
+          <button type="button" class="identity-item" data-theme="2">
+            <span class="identity-index">03</span>
+            <span>
+              <b>蔬菜之乡</b>
+              <small>高山产业与农业科技</small>
+            </span>
+            <img class="identity-thumb" src="assets/photo-02.webp" alt="高山温室番茄种植" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section spots-section" id="spots">
+      <div class="container section-head section-head-wrap">
+        <div>
+          <p class="section-kicker">特色点位</p>
+          <h2>走进双河八处精彩</h2>
+          <p class="section-desc">点击卡片查看详细介绍，可用于后续一景一码扫码导览。</p>
+        </div>
+      </div>
+      <div class="container toolbar">
+        <div class="filters" id="filters" role="group" aria-label="景点分类"></div>
+        <label class="search-box">
+          <input id="searchInput" type="search" placeholder="搜索景点或村名" autocomplete="off" aria-label="搜索景点或村名">
+        </label>
+      </div>
+      <div class="container places-grid" id="placesGrid" aria-live="polite"></div>
+      <div class="container empty-state" id="emptyState" hidden>没有找到相关内容。</div>
+    </section>
+
+    <section class="section industry-section" id="industry">
+      <div class="container section-head">
+        <div>
+          <p class="section-kicker">高山蔬菜</p>
+          <h2>高山上的绿色产业</h2>
+        </div>
+      </div>
+      <div class="container industry-grid">
+        <div class="industry-visual card">
+          <img src="assets/tomato-panorama.webp" alt="武隆高山蔬菜基地实景" loading="lazy">
+        </div>
+        <div class="industry-copy card">
+          <p>双河镇蔬菜种植已有30多年历史，是重庆市重点的高山蔬菜秋淡保供基地。主要种植甘蓝、白菜、番茄、辣椒、糯玉米、萝卜等20多个品种。</p>
+          <div class="industry-data">
+            <div><b>4.6万亩</b><span>2025年播种面积（含复种）</span></div>
+            <div><b>18.4万吨</b><span>2025年产量</span></div>
+            <div><b>2.5亿元</b><span>2025年销售收入</span></div>
+          </div>
+          <ul class="industry-list">
+            <li>集中育苗工厂1个、冷冻物流基地1个、分拣中心1个。</li>
+            <li>蔬菜观光休闲示范点2个、采摘体验示范点3个。</li>
+            <li>蔬菜产业市级龙头企业2家，农民专业合作社32个。</li>
+            <li>20亩以上规模种植大户231户，蔬菜销售经纪人138人。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section villages-section" id="villages">
+      <div class="container section-head">
+        <div>
+          <p class="section-kicker">村社概览</p>
+          <h2>八村一社区</h2>
+          <p class="section-desc">沿着山路认识双河村社，点击地图标记查看已收录点位。</p>
+        </div>
+      </div>
+      <div class="container village-map-card card">
+        <div class="village-map-header">
+          <div>
+            <p class="map-eyebrow">SHUANGHE · WULONG</p>
+            <h3>山川之间，村村相连</h3>
+            <p>点选标记，展开村社导览</p>
+          </div>
+          <div class="map-legend" aria-hidden="true">
+            <span><i class="legend-village"></i>村社</span>
+            <span><i class="legend-road"></i>乡道示意</span>
+          </div>
+        </div>
+        <div class="village-map" role="group" aria-label="双河镇八村一社区分布示意图">
+          <img class="village-map-art" src="assets/shuanghe-village-map.svg" alt="" aria-hidden="true">
+          <div class="map-caption" aria-hidden="true"><span>山地田园 · 高山蔬香</span><b>双河镇</b></div>
+          <div class="village-map-pins" id="villageGrid"></div>
+        </div>
+        <p class="map-footnote"><span aria-hidden="true">✳</span> 村社位置为导览示意，非导航地图</p>
+      </div>
+    </section>
+
+    <section class="section honors-section">
+      <div class="container section-head">
+        <div>
+          <p class="section-kicker">发展纪事</p>
+          <h2>看见双河的发展足迹</h2>
+        </div>
+      </div>
+      <div class="container honor-grid">
+        <article class="honor-card card">
+          <img src="assets/photo-01.webp" alt="双河高山蔬菜基地" loading="lazy">
+          <div class="honor-copy"><b>2018年</b><p>获农业农村部全国“一村一品”示范镇称号。</p></div>
+        </article>
+        <article class="honor-card card">
+          <img src="assets/photo-05.webp" alt="木根村乡村文旅风貌" loading="lazy">
+          <div class="honor-copy"><b>2022年</b><p>木根村获“重庆市第三批乡村旅游重点村”称号。</p></div>
+        </article>
+        <article class="honor-card card">
+          <img src="assets/photo-03.webp" alt="武隆高山蔬菜研究所" loading="lazy">
+          <div class="honor-copy"><b>2023年</b><p>以木根村为核心的“第九批国家农业科技园”获认定。</p></div>
+        </article>
+        <article class="honor-card card">
+          <img src="assets/photo-02.webp" alt="高山温室番茄种植" loading="lazy">
+          <div class="honor-copy"><b>2025年</b><p>以双河为主的高山蔬菜入选“巴渝土特产”名优百品。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="section-kicker light">欢迎了解双河</p>
+          <h2>夏来双河，22℃的夏天等你</h2>
+          <p>避暑康养、番茄采摘、森林露营、红色研学、徒步休闲，欢迎走进双河、了解双河。</p>
+        </div>
+        <a class="contact-phone" href="tel:02377730226">咨询电话：023-77730226</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <article class="dialog-panel" id="detailContent"></article>
+  </dialog>
+  <dialog id="infoDialog" class="info-dialog">
+    <article class="dialog-panel info-panel" id="infoContent"></article>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

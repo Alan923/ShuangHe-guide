@@ -1,0 +1,9 @@
+{
+  "name": "shuanghe-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "双河镇数字导览静态网站",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs"
+  }
+}

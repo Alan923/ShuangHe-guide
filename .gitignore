@@ -1,0 +1,9 @@
+node_modules/
+dist/
+cloudflare-pages-dist/
+二维码/
+__pycache__/
+*.py[cod]
+.env*
+!.env.example
+待确认事项.md
