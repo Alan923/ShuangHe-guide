@@ -15,20 +15,15 @@
 - `package.json`、`scripts/build-pages.mjs`：Cloudflare Pages 构建配置
 
 ## 三、发布方式
-### 方式1：Cloudflare Pages（Git 集成）
-本项目是纯静态网页，不需要服务器、数据库或第三方构建依赖。连接 GitHub 仓库时使用以下构建设置：
+### 方式1：GitHub Pages（当前展示）
+本项目为纯静态网站，可直接从仓库根目录发布，无需额外构建命令。
 
-| 设置 | 值 |
-|---|---|
-| Production branch | `main` |
-| Root directory | `/`（仓库根目录） |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Environment variables | 无 |
+1. 打开 GitHub 仓库，进入 **Settings → Pages**。
+2. 在 **Build and deployment** 中选择 **Deploy from a branch**。
+3. 选择分支 `main` 和目录 `/(root)`，点击 **Save**。
+4. 发布完成后，可通过 `https://alan923.github.io/ShuangHe-guide/` 访问。
 
-连接完成后，推送到 `main` 会自动构建并部署。Cloudflare Pages 免费计划可托管静态文件，静态资源请求免费且不限量。
-
-本地可运行 `npm run build` 生成 `dist/` 预览构建产物。若需手动拖拽上传，也可运行 `准备CloudflarePages.ps1` 生成 `cloudflare-pages-dist/`。
+之后推送到 `main` 会自动更新网站。GitHub Pages 网站对公众开放；GitHub Free 计划要求仓库为公开仓库，私有仓库需账户计划支持 Pages。
 
 ### 方式2：Netlify
 1. 登录 Netlify。
