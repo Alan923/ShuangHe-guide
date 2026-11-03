@@ -25,7 +25,7 @@
         <a href="#overview">镇情概览</a>
         <a href="#spots">特色点位</a>
         <a href="#industry">高山蔬菜</a>
-        <a href="#villages">村社概览</a>
+        <a href="#honors">发展足迹</a>
       </nav>
       <button class="share-btn" type="button" id="shareBtn">分享</button>
     </div>
@@ -138,59 +138,40 @@
       </div>
     </section>
 
-    <section class="section villages-section" id="villages">
-      <div class="container section-head">
-        <div>
-          <p class="section-kicker">村社概览</p>
-          <h2>八村一社区</h2>
-          <p class="section-desc">沿着山路认识双河村社，点击地图标记查看已收录点位。</p>
-        </div>
-      </div>
-      <div class="container village-map-card card">
-        <div class="village-map-header">
-          <div>
-            <p class="map-eyebrow">SHUANGHE · WULONG</p>
-            <h3>山川之间，村村相连</h3>
-            <p>点选标记，展开村社导览</p>
-          </div>
-          <div class="map-legend" aria-hidden="true">
-            <span><i class="legend-village"></i>村社</span>
-            <span><i class="legend-road"></i>乡道示意</span>
-          </div>
-        </div>
-        <div class="village-map" role="group" aria-label="双河镇八村一社区分布示意图">
-          <img class="village-map-art" src="assets/shuanghe-village-map.svg" alt="" aria-hidden="true">
-          <div class="map-caption" aria-hidden="true"><span>山地田园 · 高山蔬香</span><b>双河镇</b></div>
-          <div class="village-map-pins" id="villageGrid"></div>
-        </div>
-        <p class="map-footnote"><span aria-hidden="true">✳</span> 村社位置为导览示意，非导航地图</p>
-      </div>
-    </section>
-
-    <section class="section honors-section">
+    <section class="section honors-section" id="honors">
       <div class="container section-head">
         <div>
           <p class="section-kicker">发展纪事</p>
           <h2>看见双河的发展足迹</h2>
         </div>
       </div>
-      <div class="container honor-grid">
-        <article class="honor-card card">
-          <img src="assets/photo-01.webp" alt="双河高山蔬菜基地" loading="lazy">
-          <div class="honor-copy"><b>2018年</b><p>获农业农村部全国“一村一品”示范镇称号。</p></div>
-        </article>
-        <article class="honor-card card">
-          <img src="assets/photo-05.webp" alt="木根村乡村文旅风貌" loading="lazy">
-          <div class="honor-copy"><b>2022年</b><p>木根村获“重庆市第三批乡村旅游重点村”称号。</p></div>
-        </article>
-        <article class="honor-card card">
-          <img src="assets/photo-03.webp" alt="武隆高山蔬菜研究所" loading="lazy">
-          <div class="honor-copy"><b>2023年</b><p>以木根村为核心的“第九批国家农业科技园”获认定。</p></div>
-        </article>
-        <article class="honor-card card">
-          <img src="assets/photo-02.webp" alt="高山温室番茄种植" loading="lazy">
-          <div class="honor-copy"><b>2025年</b><p>以双河为主的高山蔬菜入选“巴渝土特产”名优百品。</p></div>
-        </article>
+      <div class="container history-panel card">
+        <ol class="history-flow" aria-label="双河发展历程">
+          <li class="history-event">
+            <time datetime="2018">2018年</time>
+            <p>获农业农村部全国“一村一品”示范镇称号。</p>
+          </li>
+          <li class="history-event">
+            <time datetime="2022">2022年</time>
+            <p>木根村获“重庆市第三批乡村旅游重点村”称号。</p>
+          </li>
+          <li class="history-event">
+            <time datetime="2023">2023年</time>
+            <p>以木根村为核心的“第九批国家农业科技园”获认定。</p>
+          </li>
+          <li class="history-event">
+            <time datetime="2025">2025年</time>
+            <p>以双河为主的高山蔬菜入选“巴渝土特产”名优百品。</p>
+          </li>
+        </ol>
+        <div class="tourism-capacity" aria-label="乡村旅游接待能力：653家农家乐，29400个床位">
+          <div class="capacity-heading">
+            <span class="capacity-icon" aria-hidden="true">⌂</span>
+            <div><small>山居好客 · 避暑康养</small><b>乡村旅游接待能力</b></div>
+          </div>
+          <div class="capacity-figure"><strong>653</strong><span>家农家乐</span></div>
+          <div class="capacity-figure"><strong>29,400</strong><span>个床位</span></div>
+        </div>
       </div>
     </section>
 

@@ -100,33 +100,6 @@
     $('#emptyState').hidden = spots.length > 0;
   }
 
-  // 示意图排布坐标仅用于视觉布局，不代表实际地理坐标。
-  const villageMapPositions = {
-    '荞子村': [20, 20],
-    '铁炉村': [50, 15],
-    '石坝村': [80, 20],
-    '梅子村': [87, 45],
-    '坨田村': [78, 75],
-    '新春村': [52, 83],
-    '木根村': [25, 68],
-    '团兴村': [14, 44],
-    '双河社区': [50, 49]
-  };
-
-  function renderVillages() {
-    $('#villageGrid').innerHTML = data.villages.map(village => {
-      const related = data.spots.filter(spot => spot.village.includes(village.name));
-      const summary = related.length ? `${related.length}处已收录点位` : '暂未收录点位';
-      const [x, y] = villageMapPositions[village.name] || [50, 50];
-      return `
-        <button type="button" class="village-item" data-village="${escapeHtml(village.name)}" aria-label="查看${escapeHtml(village.name)}，${escapeHtml(summary)}" style="--pin-x:${x}%;--pin-y:${y}%">
-          <span class="village-pin-marker" aria-hidden="true"><i></i></span>
-          <span class="village-pin-label"><b>${escapeHtml(village.name)}</b><small>${escapeHtml(summary)}</small></span>
-        </button>
-      `;
-    }).join('');
-  }
-
   function openDialog(dialog) {
     if (!dialog.open) dialog.showModal();
     setScrollLock();
@@ -209,7 +182,6 @@
   renderTown();
   renderFilters();
   renderPlaces();
-  renderVillages();
 
   $('#shareBtn').addEventListener('click', () => {
     const url = new URL(location.href);
@@ -242,20 +214,6 @@
     if (themeBtn) {
       const theme = data.town.themes[Number(themeBtn.dataset.theme)];
       if (theme) showInfo(theme.title, theme.subtitle, [theme.body]);
-      return;
-    }
-
-    const villageBtn = event.target.closest('[data-village]');
-    if (villageBtn) {
-      const village = data.villages.find(item => item.name === villageBtn.dataset.village);
-      if (!village) return;
-      const related = data.spots.filter(spot => spot.village.includes(village.name));
-      const extraHtml = related.length ? `
-        <div class="village-links">
-          ${related.map(spot => `<button type="button" data-spot="${escapeHtml(spot.id)}">${escapeHtml(spot.shortName)}</button>`).join('')}
-        </div>
-      ` : '<p>本导览暂未收录该村社独立点位。</p>';
-      showInfo(village.name, '双河镇村社概览', [], extraHtml);
       return;
     }
 
