@@ -297,23 +297,11 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(
 .history-event::before{content:"";position:absolute;z-index:1;left:0;top:0;width:12px;height:12px;border:3px solid #fff;border-radius:50%;background:#397263;box-shadow:0 0 0 1px rgba(57,114,99,.45),0 0 0 5px rgba(57,114,99,.08)}
 .history-event time{display:block;margin-bottom:8px;color:#2c6252;font-size:19px;font-weight:700;letter-spacing:.02em}
 .history-event p{max-width:240px;margin:0;color:#455a50;font-size:14px;line-height:1.8}
-.tourism-capacity{display:grid;grid-template-columns:minmax(210px,1.2fr) repeat(2,minmax(150px,.8fr));align-items:center;gap:22px;padding:20px 22px;border:1px solid rgba(77,119,87,.13);border-radius:18px;background:linear-gradient(105deg,rgba(232,241,231,.82),rgba(248,247,238,.86))}
-.capacity-heading{display:flex;align-items:center;gap:13px}
-.capacity-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(77,119,87,.14);border-radius:14px;background:rgba(255,255,255,.65);color:#4b745b;font-size:24px;line-height:1}
-.capacity-heading small,.capacity-heading b{display:block}
-.capacity-heading small{color:#758777;font-size:11px;letter-spacing:.08em}
-.capacity-heading b{margin-top:2px;color:#315544;font-size:15px}
-.capacity-figure{display:flex;align-items:baseline;gap:8px;padding-left:22px;border-left:1px solid rgba(77,119,87,.16)}
-.capacity-figure strong{color:#2a5f4e;font-size:clamp(26px,3.2vw,36px);line-height:1.15;letter-spacing:-.04em}
-.capacity-figure span{color:#596e62;font-size:14px;white-space:nowrap}
 @media (max-width:900px){
   .history-panel{padding:30px 26px 24px}
   .history-flow{gap:14px}
   .history-event{padding-right:6px}
   .history-event p{font-size:13px}
-  .tourism-capacity{grid-template-columns:1fr 1fr;gap:18px}
-  .capacity-heading{grid-column:1/-1}
-  .capacity-figure:nth-child(2){border-left:0;padding-left:0}
 }
 @media (max-width:680px){
   .history-panel{padding:25px 20px 20px}
@@ -325,10 +313,4 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(
   .history-event::before{left:0;top:5px}
   .history-event time{font-size:18px;margin-bottom:3px}
   .history-event p{max-width:none;font-size:14px}
-  .tourism-capacity{grid-template-columns:1fr 1fr;gap:15px;padding:17px 16px}
-  .capacity-heading{grid-column:1/-1}
-  .capacity-figure{display:block;padding-left:14px}
-  .capacity-figure strong,.capacity-figure span{display:block}
-  .capacity-figure strong{font-size:27px}
-  .capacity-figure span{margin-top:3px;font-size:13px}
 }
